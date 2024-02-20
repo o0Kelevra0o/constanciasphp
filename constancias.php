@@ -7,10 +7,10 @@
 </head>
 <body>
 
-<div style="text-align: center;">
+<div>
     <label id="fecha_hora"></label><br><br>
     <label for="unidad">Unidad:</label>
-    <select id="unidad"></select><br><br>
+    <select id="unidad" placeholder="Seleccione"></select><br><br>
     <button id="generar_folio_btn">Generar Folio</button><br><br>
     <label for="folio">Folio:</label>
     <label id="folio_label"></label><br><br>
