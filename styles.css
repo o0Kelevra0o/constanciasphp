@@ -1,116 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
-.container {
-    width: 400px;
-    padding: 30px;
-    background-color: #fff;
+.formulario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto; /* Centra el formulario */
+    width: min(50rem, 100%);
 }
 
-.container h1 {
-    text-align: center;
-    color: #333;
-    font-family: 'Playfair Display', serif;
-    margin-bottom: 20px;
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
+.tiempo {
+    font-size: 24px;
     font-weight: bold;
-    display: block;
+    text-align: center;
+    grid-column: 1 / 3; /* Ocupa ambas columnas */
 }
 
-.form-group input[type="text"],
-.form-group input[type="time"],
-.form-group select {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-.input-group {
+.btnfolio{
+    grid-row: 3;
+    grid-column: 1;
     display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-}
-
-.input-group input[type="text"] {
-    width: 48%;
-    padding: 10px;
-    margin-right: 4%;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-
-.input-group input[type="text"]:last-child {
-    margin-right: 0;
-}
-
-.checkbox-container {
-    display: flex;
+    gap: 2rem;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 0.7rem;
 }
 
-.checkbox-container label {
-    margin-left: 10px;
+.titulos:nth-child(1){
+    grid-column: 4/1;
+}
+
+.usuario{
+    grid-row: 4;
+}
+
+.tclinica{
+    grid-row: 5;
+    grid-column: 1;
+}
+
+.elaboro{
+    grid-row: 6;
+}
+
+.check{
+    grid-row: 7;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.check label{
+    display: flex;
+    text-align: justify;
+    font-size: small;
+    margin-bottom: 0.8rem;
+}
+
+.btnguardar{
+    grid-row: 8;
+}
+
+
+input[type="text"],
+input[type="time"],
+select {
+    border: 1px solid #ccc; /* Añade borde a todos los input y select */
+    border-radius: 5px;
+    padding: 0.3rem;
+    width: calc(100% - 22px); /* Ajusta el ancho de los input y select */
+    margin-bottom: 0.4rem; /* Añade margen inferior */
+    outline: none;
+}
+
+input#elaboro {
+    border: 1px solid #ccc; /* Añade borde a todos los input y select */
+    border-radius: 5px;
+    padding: 0.5rem;
+    width: calc(100% - 22px); /* Ajusta el ancho de los input y select */
+    margin-bottom: 0.3rem; /* Añade margen inferior */
+    outline: none;
+}
+
+::placeholder {
+    font-weight: bold;
+    color: #ccc;
+}
+
+.titulos {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
 }
 
 button {
-    width: 100%;
-    padding: 12px;
+    padding: 10px 20px;
     border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: #fff;
+    outline: none;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    background-color: #007bff;
+    color: #ffffff;
+    border-radius: 5px;
 }
 
 button:hover {
     background-color: #0056b3;
 }
 
-#imprimir_btn {
-    background-color: #28a745;
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
 }
 
-#imprimir_btn:hover {
-    background-color: #218838;
+.imagen {
+    text-align: center;
+    align-self: center; /* Centra la imagen verticalmente */
+    grid-column: 2;
+    grid-row: 2/9;
+    
 }
-
-@media (max-width: 480px) {
-    .container {
-        width: 90%;
-    }
-
-    .input-group input[type="text"] {
-        width: 100%;
-        margin-right: 0;
-    }
-
-    button {
-        width: 100%;
-    }
-}
-
-
